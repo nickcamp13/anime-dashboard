@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
 
-const AnimeInfo = ({ anime }) => {
+const AnimeInfo = ({ anime, num }) => {
   return (
     <tr>
+      <td>{num + 1}</td>
       <td>
         <img src={anime.images.jpg.image_url} alt="" />
       </td>

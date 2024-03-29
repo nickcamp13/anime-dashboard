@@ -3,7 +3,7 @@ import { useState } from "react";
 import AnimeInfo from "./AnimeInfo";
 
 const AnimeList = ({ list, setQuery }) => {
-  const [search, setSearch] = useState("search");
+  const [search, setSearch] = useState("");
 
   const handleChange = (e) => {
     setSearch(e.target.value);
@@ -27,6 +27,7 @@ const AnimeList = ({ list, setQuery }) => {
       <table>
         <thead>
           <tr>
+            <th>#</th>
             <th>Image</th>
             <th>Title</th>
             <th>Genre(s)</th>
@@ -35,7 +36,7 @@ const AnimeList = ({ list, setQuery }) => {
         </thead>
         <tbody>
           {list &&
-            list.map((anime, idx) => <AnimeInfo key={idx} anime={anime} />)}
+            list.map((anime, idx) => <AnimeInfo key={idx} anime={anime} num={idx} />)}
         </tbody>
       </table>
     </div>
