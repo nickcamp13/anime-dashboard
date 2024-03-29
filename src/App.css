@@ -1,1 +1,11 @@
+td {
+  text-align: center;
+  max-width: 24rem;
+}
 
+.genres {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  justify-content: center;
+}
