@@ -33,7 +33,7 @@ function App() {
   const getTop100 = () => {};
 
   return (
-    <div>
+    <div className="app">
       <div id="sidebar">
         <header>Anime Dashboard</header>
         <nav>

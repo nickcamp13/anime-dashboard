@@ -16,7 +16,7 @@ const AnimeList = ({ list, setQuery }) => {
   };
 
   return (
-    <div>
+    <div className="anime-list">
       <input
         type="text"
         value={search}
