@@ -11,8 +11,8 @@ Time spent: **8** hours spent in total
 The following **required** functionality is completed:
 
 - [ ] **The app includes at least one unique chart developed using the fetched data that tell an interesting story**
-- [ ] **Clicking on an item in the list view displays more details about it**
-- [ ] **Clicking on an item has a direct, unique link to that item's detail view page**
+- [x] **Clicking on an item in the list view displays more details about it**
+- [x] **Clicking on an item has a direct, unique link to that item's detail view page**
 
 The following **optional** features are implemented:
 
@@ -27,11 +27,11 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![Video Walkthrough](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjI0Zm01bnh3encxcTV1dDlsZzhkODB3eHE5dmpqOWFjanV6cHZ3cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vCWeklhIDMJPKjDlBU/giphy.gif)
 
 <!-- Replace this with whatever GIF tool you used! -->
 
-GIF created with ...
+GIF created with [Kap](https://getkap.co/) for macOS 
 
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
