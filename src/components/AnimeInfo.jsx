@@ -5,7 +5,7 @@ const AnimeInfo = ({ anime, num }) => {
     <tr>
       <td>{num + 1}</td>
       <td>
-        <img src={anime.images.jpg.image_url} alt="" />
+        <img src={anime.images.jpg.image_url} alt="" className="cover-img" />
       </td>
       <td>{anime.title_english ? anime.title_english : anime.titles[0].title}</td>
       <td>

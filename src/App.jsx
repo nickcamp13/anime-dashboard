@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import AnimeList from "./components/AnimeList";
-import StatisticCard from "./components/StatisticCard";
 import "./App.css";
 
 function App() {
@@ -26,12 +25,6 @@ function App() {
     getAnime().catch(console.error);
   }, [query]);
 
-  const getMostPopular = () => {};
-
-  const getMostFrequentGenre = () => {};
-
-  const getTop100 = () => {};
-
   return (
     <div className="app">
       <div id="sidebar">
@@ -43,14 +36,6 @@ function App() {
         </nav>
       </div>
       <main>
-        <div className="statistics">
-          {/* <StatisticCard list={anime} statistic="Most Popular"/>
-          <StatisticCard
-            statistic="Most Frequent Genre"
-            method={getMostFrequentGenre}
-          />
-          <StatisticCard statistic="Top 100" method={getTop100} /> */}
-        </div>
         <AnimeList list={anime} setQuery={setQuery} />
       </main>
     </div>
