@@ -28,7 +28,9 @@ function App() {
   return (
     <div className="app">
       <div id="sidebar">
-        <header>Anime Dashboard</header>
+        <header>
+          <h3>Anime Dashboard</h3>
+        </header>
         <nav>
           <li>Dashboard</li>
           <li>Search</li>

@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import AnimeInfo from "./AnimeInfo";
+import { Route, Routes } from "react-router-dom";
+import AnimeDetails from "./AnimeDetails";
 
 const AnimeList = ({ list, setQuery }) => {
   const [search, setSearch] = useState("");
@@ -10,35 +12,48 @@ const AnimeList = ({ list, setQuery }) => {
   };
 
   const updateQuery = (e) => {
-    if (e.key === 'Enter') {
+    if (e.key === "Enter") {
       setQuery(search);
     }
   };
 
   return (
     <div className="anime-list">
-      <input
-        type="text"
-        value={search}
-        onChange={handleChange}
-        onKeyDown={updateQuery}
-        placeholder="Search Anime..."
-      />
-      <table>
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Image</th>
-            <th>Title</th>
-            <th>Genre(s)</th>
-            <th>Popularity</th>
-          </tr>
-        </thead>
-        <tbody>
-          {list &&
-            list.map((anime, idx) => <AnimeInfo key={idx} anime={anime} num={idx} />)}
-        </tbody>
-      </table>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <input
+                type="text"
+                value={search}
+                onChange={handleChange}
+                onKeyDown={updateQuery}
+                placeholder="Search Anime..."
+              />
+              <table>
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Image</th>
+                    <th>Title</th>
+                    <th>Genre(s)</th>
+                    <th>Popularity</th>
+                    <th>Link</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {list &&
+                    list.map((anime, idx) => (
+                      <AnimeInfo key={idx} anime={anime} num={idx} />
+                    ))}
+                </tbody>
+              </table>
+            </>
+          }
+        />
+        <Route path="/anime/:id" element={<AnimeDetails />} />
+      </Routes>
     </div>
   );
 };

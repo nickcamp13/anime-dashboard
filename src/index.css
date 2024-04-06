@@ -29,11 +29,12 @@ body {
   min-width: 320px;
   min-height: 100vh;
   width: 100vw;
-  background-color: #e3eeff;
+  /* background-color: #e3eeff; */
 }
 
 #root {
   flex-grow: 1;
+  align-self: flex-start;
 }
 
 h1 {

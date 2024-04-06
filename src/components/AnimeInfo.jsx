@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { Link } from "react-router-dom";
 
 const AnimeInfo = ({ anime, num }) => {
   return (
@@ -16,6 +17,9 @@ const AnimeInfo = ({ anime, num }) => {
         </div>
       </td>
       <td>{anime.popularity}</td>
+      <td>
+        <Link to={`/anime/${anime.titles[0].title}`} state={{ anime }}>More Details</Link>
+      </td>
     </tr>
   );
 };
